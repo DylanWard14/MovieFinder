@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CenterLayout renders default correctly 1`] = `
+<div
+  class="CenterLayout__Component-sc-1uihjrr-0 hksiaR"
+>
+  <div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pretium interdum ex ut pulvinar. Ut semper turpis tortor, porta euismod diam mattis ac. Etiam finibus libero vel tortor feugiat egestas. Morbi aliquet dictum condimentum. Suspendisse lobortis tempor ligula vitae imperdiet.
+    </p>
+  </div>
+</div>
+`;

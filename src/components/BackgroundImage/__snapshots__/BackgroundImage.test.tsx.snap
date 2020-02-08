@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackgroundImage renders with a background image correctly 1`] = `
+<div
+  class="BackgroundImage__Image-sc-1a331ab-0 dsVcSq"
+/>
+`;
