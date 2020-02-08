@@ -10,12 +10,8 @@ const Component = styled.div`
     margin: 0 auto;
 `;
 
-const CenterLayout: React.FunctionComponent<CenterLayoutProps> = ({children}) => {
-    return (
-        <Component>
-            {children}
-        </Component>
-    );
-}
+const CenterLayout: React.FunctionComponent<CenterLayoutProps> = ({ children }) => {
+    return <Component>{children}</Component>;
+};
 
 export default CenterLayout;
