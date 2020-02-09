@@ -9,10 +9,10 @@ const HomePage: React.FunctionComponent = props => {
     return (
         <BackgroundImage imageURLExtension="/4iJfYYoQzZcONB9hNzg0J0wWyPH.jpg">
             <CenterLayout>
-                <TwoColumnLayout
-                    leftColumn={<MoviePoster imageURLExtension="/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg" />}
-                    rightColumn={<p>This is also a test</p>}
-                />
+                <TwoColumnLayout>
+                    <MoviePoster imageURLExtension="/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg" />
+                    <p>This is also a test</p>
+                </TwoColumnLayout>
             </CenterLayout>
         </BackgroundImage>
     );

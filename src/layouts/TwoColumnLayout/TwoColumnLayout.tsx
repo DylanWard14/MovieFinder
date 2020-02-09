@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 interface TwoColumnLayoutProps {
-    leftColumn: React.ReactNode | React.ReactNode[];
-    rightColumn: React.ReactNode | React.ReactNode[];
+    children: [React.ReactNode | React.ReactNode[], React.ReactNode | React.ReactNode[]];
 }
 
 const Column = styled.div<{ width: number }>`
@@ -12,11 +11,16 @@ const Column = styled.div<{ width: number }>`
     float: left;
 `;
 
-const TwoColumnLayout: React.FunctionComponent<TwoColumnLayoutProps> = ({ leftColumn, rightColumn }) => {
+const TwoColumnLayout: React.FunctionComponent<TwoColumnLayoutProps> = ({ children }) => {
     return (
         <div>
-            <Column width={45}>{leftColumn}</Column>
-            <Column width={55}>{rightColumn}</Column>
+            {children.map((child, index) => {
+                return (
+                    <Column key={`TwoColumnLayoutColumn${index}`} width={index === 0 ? 45 : 55}>
+                        {child}
+                    </Column>
+                );
+            })}
         </div>
     );
 };
