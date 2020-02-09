@@ -4,7 +4,7 @@ import { withKnobs, text } from '@storybook/addon-knobs';
 import BackgroundImage from './BackgroundImage';
 
 export default {
-    title: 'BackgroundImage',
+    title: 'Components/BackgroundImage',
     decorators: [withKnobs],
 };
 

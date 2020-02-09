@@ -6,7 +6,7 @@ interface CenterLayoutProps {
 }
 
 const Component = styled.div`
-    width: 50vw;
+    width: 50%;
     margin: 0 auto;
 `;
 
