@@ -20,8 +20,6 @@ const Image = styled.div<{ url: string }>`
 const BackgroundImage: React.FunctionComponent<BackgroundImageProps> = ({ imageURLExtension, children }) => {
     const FullImageUrl = `https://image.tmdb.org/t/p/original${imageURLExtension}`;
 
-    console.log(FullImageUrl);
-
     return <Image url={FullImageUrl}>{children}</Image>;
 };
 
