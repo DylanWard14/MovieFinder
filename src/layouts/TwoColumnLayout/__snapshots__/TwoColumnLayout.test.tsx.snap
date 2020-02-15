@@ -2,7 +2,7 @@
 
 exports[`TwoColumnLayout renders with multiple children correctly 1`] = `
 <div
-  class="TwoColumnLayout__Component-cpzjfm-0 iRIgBN"
+  class="TwoColumnLayout__Component-cpzjfm-0 eHmSiy"
 >
   <div
     class="TwoColumnLayout__Column-cpzjfm-1 bGhpCZ"
@@ -41,7 +41,7 @@ exports[`TwoColumnLayout renders with multiple children correctly 1`] = `
 
 exports[`TwoColumnLayout renders with single children correctly 1`] = `
 <div
-  class="TwoColumnLayout__Component-cpzjfm-0 iRIgBN"
+  class="TwoColumnLayout__Component-cpzjfm-0 eHmSiy"
 >
   <div
     class="TwoColumnLayout__Column-cpzjfm-1 bGhpCZ"
