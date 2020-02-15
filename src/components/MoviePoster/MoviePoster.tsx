@@ -7,7 +7,8 @@ interface MoviePosterProps {
 
 const Poster = styled.img.attrs<{ url: string }>({})`
     width: 100%;
-    height: 100%;
+    height: auto;
+    border-radius: 5px;
 `;
 
 const MoviePoster: React.FunctionComponent<MoviePosterProps> = ({ imageURLExtension }) => {

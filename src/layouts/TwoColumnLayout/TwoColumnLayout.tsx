@@ -1,19 +1,43 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-interface TwoColumnLayoutProps {
-    children: [React.ReactNode | React.ReactNode[], React.ReactNode | React.ReactNode[]];
-}
+const Component = styled.div`
+    background: black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    width: 60rem;
+    margin: 0 auto;
+
+    @media (max-width: 1250px) {
+        width: 55rem;
+    }
+
+    @media (max-width: 1000px) {
+        width: 45rem;
+    }
+
+    @media (max-width: 750px) {
+        flex-direction: column-reverse;
+        width: 100%;
+        max-width: 34.375rem;
+        > div {
+            width: 100%;
+        }
+    }
+`;
 
 const Column = styled.div<{ width: number }>`
     width: ${props => props.width}%;
-    display: inline-block;
-    float: left;
 `;
 
+interface TwoColumnLayoutProps {
+    children: [React.ReactNode | React.ReactNode[], React.ReactNode | React.ReactNode[]];
+}
 const TwoColumnLayout: React.FunctionComponent<TwoColumnLayoutProps> = ({ children }) => {
     return (
-        <div>
+        <Component>
             {children.map((child, index) => {
                 return (
                     <Column key={`TwoColumnLayoutColumn${index}`} width={index === 0 ? 45 : 55}>
@@ -21,7 +45,7 @@ const TwoColumnLayout: React.FunctionComponent<TwoColumnLayoutProps> = ({ childr
                     </Column>
                 );
             })}
-        </div>
+        </Component>
     );
 };
 

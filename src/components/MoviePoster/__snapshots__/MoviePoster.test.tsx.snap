@@ -2,7 +2,7 @@
 
 exports[`MoviePoster renders the movie poster correctly 1`] = `
 <img
-  class="MoviePoster__Poster-nu5x18-0 bxbeZu"
+  class="MoviePoster__Poster-nu5x18-0 gWyzBm"
   src="https://image.tmdb.org/t/p/original/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg"
 />
 `;

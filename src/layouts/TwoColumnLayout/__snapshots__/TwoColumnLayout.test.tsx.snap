@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`TwoColumnLayout renders with multiple children correctly 1`] = `
-<div>
+<div
+  class="TwoColumnLayout__Component-cpzjfm-0 iRIgBN"
+>
   <div
-    class="TwoColumnLayout__Column-cpzjfm-0 cVldBE"
+    class="TwoColumnLayout__Column-cpzjfm-1 bGhpCZ"
     width="45"
   >
     <div>
@@ -19,7 +21,7 @@ exports[`TwoColumnLayout renders with multiple children correctly 1`] = `
     </div>
   </div>
   <div
-    class="TwoColumnLayout__Column-cpzjfm-0 kaKUMt"
+    class="TwoColumnLayout__Column-cpzjfm-1 bLzGKK"
     width="55"
   >
     <div>
@@ -38,9 +40,11 @@ exports[`TwoColumnLayout renders with multiple children correctly 1`] = `
 `;
 
 exports[`TwoColumnLayout renders with single children correctly 1`] = `
-<div>
+<div
+  class="TwoColumnLayout__Component-cpzjfm-0 iRIgBN"
+>
   <div
-    class="TwoColumnLayout__Column-cpzjfm-0 cVldBE"
+    class="TwoColumnLayout__Column-cpzjfm-1 bGhpCZ"
     width="45"
   >
     <p>
@@ -48,7 +52,7 @@ exports[`TwoColumnLayout renders with single children correctly 1`] = `
     </p>
   </div>
   <div
-    class="TwoColumnLayout__Column-cpzjfm-0 kaKUMt"
+    class="TwoColumnLayout__Column-cpzjfm-1 bLzGKK"
     width="55"
   >
     <p>
