@@ -4,6 +4,8 @@ type Typography = {
     fontFamily: string;
     fontSize: string;
     color: string;
+    margin?: string;
+    fontWeight?: number;
 };
 
 declare module 'styled-components' {
@@ -13,8 +15,10 @@ declare module 'styled-components' {
             secondary: string;
         };
         typography: {
+            heading: Typography;
             paragraph: Typography;
-            label: Typography;
+            largeLabel: Typography;
+            smallLabel: Typography;
         };
     }
 }

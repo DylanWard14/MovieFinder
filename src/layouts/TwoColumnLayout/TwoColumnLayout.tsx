@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 const Component = styled.div`
-    background: black;
+    background: rgba(0, 0, 0, 0.85);
     border-radius: 5px;
     display: flex;
     flex-direction: row;
@@ -40,7 +40,7 @@ const TwoColumnLayout: React.FunctionComponent<TwoColumnLayoutProps> = ({ childr
         <Component>
             {children.map((child, index) => {
                 return (
-                    <Column key={`TwoColumnLayoutColumn${index}`} width={index === 0 ? 45 : 55}>
+                    <Column key={`TwoColumnLayoutColumn${index}`} width={index === 0 ? 40 : 60}>
                         {child}
                     </Column>
                 );

@@ -1,15 +1,14 @@
 import React from 'react';
+import { render } from 'enzyme';
+import { ThemeProvider } from 'styled-components';
 
-import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
-import TwoColumnLayout from '../../layouts/TwoColumnLayout/TwoColumnLayout';
-import MoviePoster from '../../components/MoviePoster/MoviePoster';
-import MediaDetails from '../../components/MediaDetails/MediaDetails';
+import myTheme from '../../theme';
+import MediaDetails from './MediaDetails';
 
-const HomePage: React.FunctionComponent = props => {
-    return (
-        <BackgroundImage imageURLExtension="/4iJfYYoQzZcONB9hNzg0J0wWyPH.jpg">
-            <TwoColumnLayout>
-                <MoviePoster imageURLExtension="/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg" />
+describe('TextWithLabel', () => {
+    it('renders with a label and content correctly', () => {
+        const wrapper = render(
+            <ThemeProvider theme={myTheme}>
                 <MediaDetails
                     title="Star Wars"
                     tagLine="A long time ago in a galaxy far, far away..."
@@ -21,9 +20,8 @@ const HomePage: React.FunctionComponent = props => {
                     boxOffice="$775,398,007"
                     averageVote="8.2 / 10"
                 />
-            </TwoColumnLayout>
-        </BackgroundImage>
-    );
-};
-
-export default HomePage;
+            </ThemeProvider>,
+        );
+        expect(wrapper).toMatchSnapshot();
+    });
+});

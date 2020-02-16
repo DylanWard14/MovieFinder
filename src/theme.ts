@@ -6,15 +6,33 @@ const myTheme: DefaultTheme = {
         secondary: 'white',
     },
     typography: {
+        heading: {
+            fontFamily: 'lato',
+            fontSize: '2.75rem',
+            color: 'white',
+            margin: '1rem 0 0.5rem 0',
+            fontWeight: 700,
+        },
         paragraph: {
             fontFamily: 'lato',
             fontSize: '1rem',
             color: 'white',
+            margin: '0',
+            fontWeight: 300,
         },
-        label: {
+        largeLabel: {
             fontFamily: 'oswald',
-            fontSize: '1.25rem',
+            fontSize: '1.65rem',
+            fontWeight: 300,
             color: '#00FC87',
+            margin: '0',
+        },
+        smallLabel: {
+            fontFamily: 'oswald',
+            fontSize: '1rem',
+            color: 'white',
+            fontWeight: 300,
+            margin: '0',
         },
     },
 };

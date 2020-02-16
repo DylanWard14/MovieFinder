@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextWithLabel renders with a label and content correctly 1`] = `
+<div
+  class="MediaDetails__Component-h4ei75-0 bnvBhA"
+>
+  <h1
+    class="MediaDetails__Title-h4ei75-1 kjJCT"
+  >
+    Star Wars
+  </h1>
+  <p
+    class="MediaDetails__TagLine-h4ei75-2 jIbqGD"
+  >
+    A long time ago in a galaxy far, far away...
+  </p>
+  <p
+    class="MediaDetails__Overview-h4ei75-3 ivoleL"
+  >
+    Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.
+  </p>
+  <div
+    class="TextWithLabel__Component-sc-13uehc1-0 iYUbGt"
+  >
+    <p
+      class="TextWithLabel__Heading-sc-13uehc1-1 cotHSk"
+    >
+      Adventure, Action, Science Fiction
+    </p>
+    <p
+      class="TextWithLabel__Content-sc-13uehc1-2 exRLWt"
+    >
+      Lucasfilm, 20th Century Fox
+    </p>
+  </div>
+  <div
+    class="MediaDetails__Stats-h4ei75-4 dQiniU"
+  >
+    <div
+      class="TextWithLabel__Component-sc-13uehc1-0 iYUbGt MediaDetails__StyledTextWithLabel-h4ei75-5 dlKECV"
+    >
+      <p
+        class="TextWithLabel__Heading-sc-13uehc1-1 iccGTZ"
+      >
+        Orignal Release:
+      </p>
+      <p
+        class="TextWithLabel__Content-sc-13uehc1-2 kWXfYE"
+      >
+        1977-05-25
+      </p>
+    </div>
+    <div
+      class="TextWithLabel__Component-sc-13uehc1-0 iYUbGt MediaDetails__StyledTextWithLabel-h4ei75-5 dlKECV"
+    >
+      <p
+        class="TextWithLabel__Heading-sc-13uehc1-1 iccGTZ"
+      >
+        Running Time:
+      </p>
+      <p
+        class="TextWithLabel__Content-sc-13uehc1-2 kWXfYE"
+      >
+        121 mins
+      </p>
+    </div>
+  </div>
+  <div
+    class="MediaDetails__Stats-h4ei75-4 dQiniU"
+  >
+    <div
+      class="TextWithLabel__Component-sc-13uehc1-0 iYUbGt MediaDetails__StyledTextWithLabel-h4ei75-5 dlKECV"
+    >
+      <p
+        class="TextWithLabel__Heading-sc-13uehc1-1 iccGTZ"
+      >
+        Box Office:
+      </p>
+      <p
+        class="TextWithLabel__Content-sc-13uehc1-2 kWXfYE"
+      >
+        $775,398,007
+      </p>
+    </div>
+    <div
+      class="TextWithLabel__Component-sc-13uehc1-0 iYUbGt MediaDetails__StyledTextWithLabel-h4ei75-5 dlKECV"
+    >
+      <p
+        class="TextWithLabel__Heading-sc-13uehc1-1 iccGTZ"
+      >
+        Vote Average:
+      </p>
+      <p
+        class="TextWithLabel__Content-sc-13uehc1-2 kWXfYE"
+      >
+        8.2 / 10
+      </p>
+    </div>
+  </div>
+</div>
+`;

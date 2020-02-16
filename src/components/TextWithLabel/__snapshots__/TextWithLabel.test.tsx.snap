@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextWithLabel renders with a label and content and sizes set correctly 1`] = `
+<div
+  class="TextWithLabel__Component-sc-13uehc1-0 iYUbGt"
+>
+  <p
+    class="TextWithLabel__Heading-sc-13uehc1-1 iccGTZ"
+  >
+    label
+  </p>
+  <p
+    class="TextWithLabel__Content-sc-13uehc1-2 kWXfYE"
+  >
+    content
+  </p>
+</div>
+`;
+
+exports[`TextWithLabel renders with a label and content correctly 1`] = `
+<div
+  class="TextWithLabel__Component-sc-13uehc1-0 iYUbGt"
+>
+  <p
+    class="TextWithLabel__Heading-sc-13uehc1-1 cotHSk"
+  >
+    label
+  </p>
+  <p
+    class="TextWithLabel__Content-sc-13uehc1-2 exRLWt"
+  >
+    content
+  </p>
+</div>
+`;

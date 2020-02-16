@@ -2,11 +2,11 @@
 
 exports[`TwoColumnLayout renders with multiple children correctly 1`] = `
 <div
-  class="TwoColumnLayout__Component-cpzjfm-0 eHmSiy"
+  class="TwoColumnLayout__Component-cpzjfm-0 eHzxpl"
 >
   <div
-    class="TwoColumnLayout__Column-cpzjfm-1 bGhpCZ"
-    width="45"
+    class="TwoColumnLayout__Column-cpzjfm-1 bFrgIg"
+    width="40"
   >
     <div>
       <p>
@@ -21,8 +21,8 @@ exports[`TwoColumnLayout renders with multiple children correctly 1`] = `
     </div>
   </div>
   <div
-    class="TwoColumnLayout__Column-cpzjfm-1 bLzGKK"
-    width="55"
+    class="TwoColumnLayout__Column-cpzjfm-1 bQbOXC"
+    width="60"
   >
     <div>
       <p>
@@ -41,19 +41,19 @@ exports[`TwoColumnLayout renders with multiple children correctly 1`] = `
 
 exports[`TwoColumnLayout renders with single children correctly 1`] = `
 <div
-  class="TwoColumnLayout__Component-cpzjfm-0 eHmSiy"
+  class="TwoColumnLayout__Component-cpzjfm-0 eHzxpl"
 >
   <div
-    class="TwoColumnLayout__Column-cpzjfm-1 bGhpCZ"
-    width="45"
+    class="TwoColumnLayout__Column-cpzjfm-1 bFrgIg"
+    width="40"
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pretium interdum ex ut pulvinar. Ut semper turpis tortor, porta euismod diam mattis ac. Etiam finibus libero vel tortor feugiat egestas. Morbi aliquet dictum condimentum. Suspendisse lobortis tempor ligula vitae imperdiet. Vestibulum porta tempor molestie. Quisque eget congue erat. Quisque lorem sapien, sollicitudin eu lacinia vel, eleifend commodo ligula. Curabitur sed ullamcorper risus. Donec et lacus et justo iaculis varius. In neque arcu, sodales eu ligula at, viverra ultricies neque. Duis consectetur vulputate dui et blandit. In at eros dui. Pellentesque luctus elit quis tellus facilisis, non iaculis elit placerat. Donec et magna quam. Nulla in metus sit amet neque rhoncus tincidunt ut egestas erat.
     </p>
   </div>
   <div
-    class="TwoColumnLayout__Column-cpzjfm-1 bLzGKK"
-    width="55"
+    class="TwoColumnLayout__Column-cpzjfm-1 bQbOXC"
+    width="60"
   >
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pretium interdum ex ut pulvinar. Ut semper turpis tortor, porta euismod diam mattis ac. Etiam finibus libero vel tortor feugiat egestas. Morbi aliquet dictum condimentum. Suspendisse lobortis tempor ligula vitae imperdiet. Vestibulum porta tempor molestie. Quisque eget congue erat. Quisque lorem sapien, sollicitudin eu lacinia vel, eleifend commodo ligula. Curabitur sed ullamcorper risus. Donec et lacus et justo iaculis varius. In neque arcu, sodales eu ligula at, viverra ultricies neque. Duis consectetur vulputate dui et blandit. In at eros dui. Pellentesque luctus elit quis tellus facilisis, non iaculis elit placerat. Donec et magna quam. Nulla in metus sit amet neque rhoncus tincidunt ut egestas erat.
