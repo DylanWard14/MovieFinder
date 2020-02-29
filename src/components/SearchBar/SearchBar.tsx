@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
+import { useDispatch } from 'react-redux';
+
+import { searchRequest } from '../../store/Search/Actions';
 
 const StyledInput = styled.input`
     width: 100%;
@@ -21,9 +24,10 @@ const StyledInput = styled.input`
 
 const SearchBar: React.FunctionComponent = props => {
     const [searchTerm, setSearchTerm] = useState('');
+    const dispatch = useDispatch();
     const handleSubmit = (event: React.FormEvent<EventTarget>) => {
         event.preventDefault();
-        console.log('submitted', searchTerm);
+        dispatch(searchRequest(searchTerm));
     };
     return (
         <form onSubmit={handleSubmit}>

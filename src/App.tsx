@@ -1,5 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 import HomePage from './pages/HomePage/HomePage';
 import myTheme from './theme';
@@ -7,9 +9,11 @@ import myTheme from './theme';
 function App() {
     return (
         <div className="App">
-            <ThemeProvider theme={myTheme}>
-                <HomePage />
-            </ThemeProvider>
+            <Provider store={store}>
+                <ThemeProvider theme={myTheme}>
+                    <HomePage />
+                </ThemeProvider>
+            </Provider>
         </div>
     );
 }
