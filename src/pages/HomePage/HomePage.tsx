@@ -1,14 +1,27 @@
 import React from 'react';
+import styled from 'styled-components/macro';
 
 import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
 import TwoColumnLayout from '../../layouts/TwoColumnLayout/TwoColumnLayout';
 import MoviePoster from '../../components/MoviePoster/MoviePoster';
 import MediaDetails from '../../components/MediaDetails/MediaDetails';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import { ReactComponent as PoweredByMovieDB } from '../../svgs/PoweredByMovieDB.svg';
+
+const StyledDiv = styled.div`
+    margin-bottom: 1rem;
+`;
 
 const HomePage: React.FunctionComponent = props => {
     return (
         <BackgroundImage imageURLExtension="/4iJfYYoQzZcONB9hNzg0J0wWyPH.jpg">
-            <TwoColumnLayout>
+            <StyledDiv>
+                <TwoColumnLayout>
+                    <PoweredByMovieDB width="150px" height="75px" />
+                    <SearchBar />
+                </TwoColumnLayout>
+            </StyledDiv>
+            <TwoColumnLayout backgroundColor={'rgba(0, 0, 0, 0.85)'}>
                 <MoviePoster imageURLExtension="/btTdmkgIvOi0FFip1sPuZI2oQG6.jpg" />
                 <MediaDetails
                     title="Star Wars"

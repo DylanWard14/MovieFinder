@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-const Component = styled.div`
-    background: rgba(0, 0, 0, 0.85);
+const Component = styled.div<{ backgroundColor?: string }>`
+    background: ${props => props.backgroundColor};
     border-radius: 5px;
     display: flex;
     flex-direction: row;
@@ -30,14 +30,16 @@ const Component = styled.div`
 
 const Column = styled.div<{ width: number }>`
     width: ${props => props.width}%;
+    position: relative;
 `;
 
 interface TwoColumnLayoutProps {
     children: [React.ReactNode | React.ReactNode[], React.ReactNode | React.ReactNode[]];
+    backgroundColor?: string;
 }
-const TwoColumnLayout: React.FunctionComponent<TwoColumnLayoutProps> = ({ children }) => {
+const TwoColumnLayout: React.FunctionComponent<TwoColumnLayoutProps> = ({ children, backgroundColor }) => {
     return (
-        <Component>
+        <Component backgroundColor={backgroundColor}>
             {children.map((child, index) => {
                 return (
                     <Column key={`TwoColumnLayoutColumn${index}`} width={index === 0 ? 40 : 60}>

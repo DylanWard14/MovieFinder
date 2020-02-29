@@ -8,7 +8,15 @@ interface BackgroundImageProps {
 
 const Image = styled.div<{ url: string }>`
     height: 100vh;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 1)), url(${props => props.url});
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1),
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 1)
+        ),
+        url(${props => props.url});
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
