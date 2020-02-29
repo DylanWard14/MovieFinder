@@ -2,6 +2,6 @@
 
 exports[`BackgroundImage renders with a background image correctly 1`] = `
 <div
-  class="BackgroundImage__Image-sc-1a331ab-0 fDJSrr"
+  class="BackgroundImage__Image-sc-1a331ab-0 egTpfD"
 />
 `;
