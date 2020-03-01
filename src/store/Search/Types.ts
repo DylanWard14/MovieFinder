@@ -1,9 +1,11 @@
 export const Actions = {
-    SET_SEARCH_TERM: 'SET_SEARCH_TERM',
     SEARCH_REQUEST: 'SEARCH_REQUEST',
+    SEARCH_LOADING: 'SEARCH_LOADING',
+    SEARCH_SUCCESS: 'SEARCH_SUCCESS',
 };
 
 export type SearchStoreState = {
     searchTerm: string;
     loading: boolean;
+    data?: any;
 };
