@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
-import { useDispatch } from 'react-redux';
+import { Manager, Reference, Popper } from 'react-popper';
 
-import { searchRequest } from '../../store/Search/Actions';
+import { SearchStoreState } from '../../store/Search/Types';
+import useModalToggle from '../../hooks/useModalToggle';
+
+const StyledForm = styled.form`
+    width: 100%;
+`;
 
 const StyledInput = styled.input`
     width: 100%;
@@ -12,37 +17,99 @@ const StyledInput = styled.input`
     border-bottom: 1px solid white;
     font-size: 1rem;
     height: 1.5625rem;
-    position: absolute;
-    bottom: 1rem;
     box-sizing: border-box;
-    padding: 0 0.5rem 0.5rem;
+    padding: 0.5rem 0.5rem;
+`;
 
-    @media (max-width: 750px) {
-        position: static;
+const StyledPopper = styled.div`
+    width: 100%;
+    background: black;
+    z-index: 100;
+`;
+
+const Results = styled.ul`
+    width: 100%;
+    background: black;
+    z-index: 100;
+    list-style-type: none;
+    padding: 0;
+    margin: 0.5rem 0;
+    position: absolute;
+    color: ${props => props.theme.colors.secondary};
+`;
+
+const Result = styled.li`
+    padding: 0.5rem 1rem;
+    font-size: 1.125rem;
+    :hover,
+    :focus {
+        background: ${props => props.theme.colors.main};
+        color: black;
+        cursor: pointer;
     }
 `;
 
-const SearchBar: React.FunctionComponent = props => {
+const NoData = styled.li`
+    padding: 0.5rem 1rem;
+    font-size: 1.125rem;
+`;
+
+interface SearchBarProps {
+    searchStore: SearchStoreState;
+    handleSearchSubmit: (searchTerm: string) => void;
+    className?: string;
+}
+
+const SearchBar: React.FunctionComponent<SearchBarProps> = ({ searchStore, handleSearchSubmit, className }) => {
     const [searchTerm, setSearchTerm] = useState('');
-    const dispatch = useDispatch();
     const handleSubmit = (event: React.FormEvent<EventTarget>) => {
         event.preventDefault();
-        dispatch(searchRequest(searchTerm));
+        handleSearchSubmit(searchTerm);
     };
+
+    const { ref: ModalRef, visible } = useModalToggle(true);
+
     return (
-        <form onSubmit={handleSubmit}>
-            <StyledInput
-                type="text"
-                id="search"
-                name="search"
-                placeholder="Search For Movie Here..."
-                autoComplete="off"
-                value={searchTerm}
-                onChange={(event: React.FormEvent<HTMLInputElement>) => {
-                    setSearchTerm(event.currentTarget.value);
-                }}
-            />
-        </form>
+        <StyledForm onSubmit={handleSubmit} ref={ModalRef} className={className}>
+            <Manager>
+                <Reference>
+                    {({ ref }) => (
+                        <StyledInput
+                            type="text"
+                            id="search"
+                            name="search"
+                            placeholder="Search For Movie Here..."
+                            autoComplete="off"
+                            ref={ref}
+                            value={searchTerm}
+                            onChange={(event: React.FormEvent<HTMLInputElement>) => {
+                                setSearchTerm(event.currentTarget.value);
+                            }}
+                        />
+                    )}
+                </Reference>
+                {visible && !searchStore.loading && (
+                    <Popper placement="bottom">
+                        {({ ref, style, placement, arrowProps }) => (
+                            <StyledPopper ref={ref} style={style} data-placement={placement} tabIndex={1}>
+                                <Results>
+                                    {searchStore?.data?.length
+                                        ? searchStore.data.map((item: any) => {
+                                              return (
+                                                  <Result tabIndex={0} key={`${item.title}_Search_Result`}>
+                                                      {item.title}
+                                                  </Result>
+                                              );
+                                          })
+                                        : searchStore.searchTerm && <NoData>No results found...</NoData>}
+                                </Results>
+                                <div ref={arrowProps.ref} style={arrowProps.style} />
+                            </StyledPopper>
+                        )}
+                    </Popper>
+                )}
+            </Manager>
+        </StyledForm>
     );
 };
 

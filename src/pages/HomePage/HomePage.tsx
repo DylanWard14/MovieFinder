@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
+import { useDispatch, useSelector } from 'react-redux';
 
 import BackgroundImage from '../../components/BackgroundImage/BackgroundImage';
 import TwoColumnLayout from '../../layouts/TwoColumnLayout/TwoColumnLayout';
@@ -7,18 +8,34 @@ import MoviePoster from '../../components/MoviePoster/MoviePoster';
 import MediaDetails from '../../components/MediaDetails/MediaDetails';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import { ReactComponent as PoweredByMovieDB } from '../../svgs/PoweredByMovieDB.svg';
+import { RootState } from '../../store/store';
+import { searchRequest } from '../../store/Search/Actions';
 
 const StyledDiv = styled.div`
     margin-bottom: 1rem;
 `;
 
+const StyledSearchbar = styled(SearchBar)`
+    position: absolute;
+    bottom: 1rem;
+
+    @media (max-width: 750px) {
+        position: static;
+    }
+`;
+
 const HomePage: React.FunctionComponent = props => {
+    const searchStore = useSelector((state: RootState) => state.search);
+    const dispatch = useDispatch();
     return (
         <BackgroundImage imageURLExtension="/4iJfYYoQzZcONB9hNzg0J0wWyPH.jpg">
             <StyledDiv>
                 <TwoColumnLayout>
                     <PoweredByMovieDB width="150px" height="75px" />
-                    <SearchBar />
+                    <StyledSearchbar
+                        searchStore={searchStore}
+                        handleSearchSubmit={(searchTerm: string) => dispatch(searchRequest(searchTerm))}
+                    />
                 </TwoColumnLayout>
             </StyledDiv>
             <TwoColumnLayout backgroundColor={'rgba(0, 0, 0, 0.85)'}>
