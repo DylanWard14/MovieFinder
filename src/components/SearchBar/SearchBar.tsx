@@ -74,7 +74,7 @@ const SearchBar: React.FunctionComponent<SearchBarProps> = ({ searchStore, handl
         handleSearchSubmit(searchTerm);
     };
 
-    const { ref: ModalRef, visible } = useModalToggle(true);
+    const { ref: ModalRef, visible, setVisible } = useModalToggle(true);
 
     return (
         <StyledForm onSubmit={handleSubmit} ref={ModalRef} className={className}>
@@ -104,7 +104,9 @@ const SearchBar: React.FunctionComponent<SearchBarProps> = ({ searchStore, handl
                                         ? searchStore.data.map((item: any) => {
                                               return (
                                                   <li tabIndex={0} key={`${item.title}_Search_Result`}>
-                                                      <Result to={`/${item.id}`}>{item.title}</Result>
+                                                      <Result to={`/${item.id}`} onClick={() => setVisible(false)}>
+                                                          {item.title}
+                                                      </Result>
                                                   </li>
                                               );
                                           })
