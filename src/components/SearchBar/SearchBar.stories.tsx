@@ -17,11 +17,8 @@ const searchStore: SearchStoreState = {
 };
 
 const onSubmit = (searchTerm: string) => console.log(`searching for ${searchTerm}`);
-const handleSelection = (id: number) => console.log(`Selected movie with the id ${id}`);
 
-export const DefaultExample = () => (
-    <SearchBar searchStore={searchStore} handleSearchSubmit={onSubmit} handleMovieSelection={handleSelection} />
-);
+export const DefaultExample = () => <SearchBar searchStore={searchStore} handleSearchSubmit={onSubmit} />;
 
 export const WithResultsExample = () => (
     <ThemeProvider theme={myTheme}>
@@ -32,17 +29,12 @@ export const WithResultsExample = () => (
                 data: [{ title: 'result1' }, { title: 'result2' }, { title: 'result3' }],
             }}
             handleSearchSubmit={onSubmit}
-            handleMovieSelection={handleSelection}
         />
     </ThemeProvider>
 );
 
 export const WithNoDataExample = () => (
     <ThemeProvider theme={myTheme}>
-        <SearchBar
-            searchStore={{ ...searchStore, searchTerm: 'result', data: [] }}
-            handleSearchSubmit={onSubmit}
-            handleMovieSelection={handleSelection}
-        />
+        <SearchBar searchStore={{ ...searchStore, searchTerm: 'result', data: [] }} handleSearchSubmit={onSubmit} />
     </ThemeProvider>
 );

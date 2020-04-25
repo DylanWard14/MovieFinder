@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components/macro';
 import { Manager, Reference, Popper } from 'react-popper';
+import { Link } from 'react-router-dom';
 
 import { SearchStoreState } from '../../store/Search/Types';
 import useModalToggle from '../../hooks/useModalToggle';
@@ -38,9 +39,15 @@ const Results = styled.ul`
     color: ${props => props.theme.colors.secondary};
 `;
 
-const Result = styled.li`
+const Result = styled(Link)`
+    width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
     padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: inherit;
     font-size: 1.125rem;
+
     :hover,
     :focus {
         background: ${props => props.theme.colors.main};
@@ -57,16 +64,10 @@ const NoData = styled.li`
 interface SearchBarProps {
     searchStore: SearchStoreState;
     handleSearchSubmit: (searchTerm: string) => void;
-    handleMovieSelection: (id: number) => void;
     className?: string;
 }
 
-const SearchBar: React.FunctionComponent<SearchBarProps> = ({
-    searchStore,
-    handleSearchSubmit,
-    handleMovieSelection,
-    className,
-}) => {
+const SearchBar: React.FunctionComponent<SearchBarProps> = ({ searchStore, handleSearchSubmit, className }) => {
     const [searchTerm, setSearchTerm] = useState('');
     const handleSubmit = (event: React.FormEvent<EventTarget>) => {
         event.preventDefault();
@@ -102,13 +103,9 @@ const SearchBar: React.FunctionComponent<SearchBarProps> = ({
                                     {searchStore?.data?.length
                                         ? searchStore.data.map((item: any) => {
                                               return (
-                                                  <Result
-                                                      tabIndex={0}
-                                                      key={`${item.title}_Search_Result`}
-                                                      onClick={() => handleMovieSelection(item.id)}
-                                                  >
-                                                      {item.title}
-                                                  </Result>
+                                                  <li tabIndex={0} key={`${item.title}_Search_Result`}>
+                                                      <Result to={`/${item.id}`}>{item.title}</Result>
+                                                  </li>
                                               );
                                           })
                                         : searchStore.searchTerm && <NoData>No results found...</NoData>}
