@@ -25,12 +25,12 @@ exports[`TextWithLabel renders with a label and content correctly 1`] = `
     <p
       class="TextWithLabel__Heading-sc-13uehc1-1 cotHSk"
     >
-      Adventure, Action, Science Fiction
+      genre1, genre2
     </p>
     <p
       class="TextWithLabel__Content-sc-13uehc1-2 exRLWt"
     >
-      Lucasfilm, 20th Century Fox
+      company1, company2
     </p>
   </div>
   <div

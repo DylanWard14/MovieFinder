@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components/macro';
 
 import TextWithLabel from '../TextWithLabel/TextWithLabel';
+import formatNumberAsThousands from '../../helpers/formatNumberAsThousands';
 
 const Component = styled.div`
     padding: 1rem 1.5rem;
@@ -39,11 +40,11 @@ interface MediaDetailsProps {
     title: string;
     tagLine: string;
     overview: string;
-    genre: string;
-    productionCompany: string;
+    genres: { name: string }[];
+    productionCompanies: { name: string }[];
     release: string;
-    runTime: string;
-    boxOffice: string;
+    runTime: number;
+    boxOffice: number;
     averageVote: string;
 }
 
@@ -53,7 +54,20 @@ const MediaDetails: React.FunctionComponent<MediaDetailsProps> = props => {
             <Title>{props.title}</Title>
             <TagLine>{props.tagLine}</TagLine>
             <Overview>{props.overview}</Overview>
-            <TextWithLabel label={props.genre} content={props.productionCompany} />
+            <TextWithLabel
+                label={props.genres.reduce<string>((acc, item) => {
+                    if (acc === '') {
+                        return item.name;
+                    }
+                    return `${acc}, ${item.name}`;
+                }, '')}
+                content={props.productionCompanies.reduce<string>((acc, item) => {
+                    if (acc === '') {
+                        return item.name;
+                    }
+                    return `${acc}, ${item.name}`;
+                }, '')}
+            />
             <Stats>
                 <StyledTextWithLabel
                     label="Orignal Release:"
@@ -63,7 +77,7 @@ const MediaDetails: React.FunctionComponent<MediaDetailsProps> = props => {
                 />
                 <StyledTextWithLabel
                     label="Running Time:"
-                    content={props.runTime}
+                    content={`${props.runTime} mins`}
                     labelSize="small"
                     contentSize="large"
                 />
@@ -71,13 +85,13 @@ const MediaDetails: React.FunctionComponent<MediaDetailsProps> = props => {
             <Stats>
                 <StyledTextWithLabel
                     label="Box Office:"
-                    content={props.boxOffice}
+                    content={`$${formatNumberAsThousands(props.boxOffice)}`}
                     labelSize="small"
                     contentSize="large"
                 />
                 <StyledTextWithLabel
                     label="Vote Average:"
-                    content={props.averageVote}
+                    content={`${props.averageVote} / 10`}
                     labelSize="small"
                     contentSize="large"
                 />

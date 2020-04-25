@@ -57,10 +57,16 @@ const NoData = styled.li`
 interface SearchBarProps {
     searchStore: SearchStoreState;
     handleSearchSubmit: (searchTerm: string) => void;
+    handleMovieSelection: (id: number) => void;
     className?: string;
 }
 
-const SearchBar: React.FunctionComponent<SearchBarProps> = ({ searchStore, handleSearchSubmit, className }) => {
+const SearchBar: React.FunctionComponent<SearchBarProps> = ({
+    searchStore,
+    handleSearchSubmit,
+    handleMovieSelection,
+    className,
+}) => {
     const [searchTerm, setSearchTerm] = useState('');
     const handleSubmit = (event: React.FormEvent<EventTarget>) => {
         event.preventDefault();
@@ -96,7 +102,11 @@ const SearchBar: React.FunctionComponent<SearchBarProps> = ({ searchStore, handl
                                     {searchStore?.data?.length
                                         ? searchStore.data.map((item: any) => {
                                               return (
-                                                  <Result tabIndex={0} key={`${item.title}_Search_Result`}>
+                                                  <Result
+                                                      tabIndex={0}
+                                                      key={`${item.title}_Search_Result`}
+                                                      onClick={() => handleMovieSelection(item.id)}
+                                                  >
                                                       {item.title}
                                                   </Result>
                                               );
