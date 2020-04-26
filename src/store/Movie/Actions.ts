@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { AnyAction } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
 
-import { Actions } from './Types';
+import { Actions, MovieResponse } from './Types';
 
 export const setMovie = (movieId: number) => {
     // TODO investigate better ThunkDispatch typing
@@ -12,7 +12,7 @@ export const setMovie = (movieId: number) => {
             .get(
                 `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`,
             )
-            .then(response => {
+            .then((response: AxiosResponse<MovieResponse>) => {
                 dispatch(setMovieSuccess(response));
             })
             .catch(error => {
@@ -27,7 +27,7 @@ export const setMovieRequest = () => {
     };
 };
 
-export const setMovieSuccess = (response: any) => {
+export const setMovieSuccess = (response: AxiosResponse<MovieResponse>) => {
     return {
         type: Actions.SET_MOVIE_SUCCESS,
         payload: {

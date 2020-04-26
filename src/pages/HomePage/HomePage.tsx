@@ -45,7 +45,7 @@ const HomePage: React.FunctionComponent = props => {
 
     if (movie) {
         return (
-            <BackgroundImage imageURLExtension={movie?.backdrop_path}>
+            <BackgroundImage imageURLExtension={movie?.backdropPath}>
                 <StyledDiv>
                     <TwoColumnLayout>
                         <PoweredByMovieDB width="150px" height="75px" />
@@ -56,17 +56,17 @@ const HomePage: React.FunctionComponent = props => {
                     </TwoColumnLayout>
                 </StyledDiv>
                 <TwoColumnLayout backgroundColor={'rgba(0, 0, 0, 0.85)'}>
-                    <MoviePoster imageURLExtension={movie?.poster_path} />
+                    <MoviePoster imageURLExtension={movie?.posterPath} />
                     <MediaDetails
-                        title={movie?.original_title}
+                        title={movie?.originalTitle}
                         tagLine={movie?.tagline}
                         overview={movie?.overview}
                         genres={movie?.genres}
-                        productionCompanies={movie?.production_companies}
-                        release={movie?.release_date}
+                        productionCompanies={movie?.productionCompanies}
+                        release={movie?.releaseDate}
                         runTime={movie?.runtime}
                         boxOffice={movie?.revenue}
-                        averageVote={movie?.vote_average}
+                        averageVote={movie?.voteAverage}
                     />
                 </TwoColumnLayout>
             </BackgroundImage>

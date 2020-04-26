@@ -40,28 +40,38 @@ interface MediaDetailsProps {
     title: string;
     tagLine: string;
     overview: string;
-    genres: { name: string }[];
-    productionCompanies: { name: string }[];
+    genres?: { name: string }[];
+    productionCompanies?: { name: string }[];
     release: string;
     runTime: number;
     boxOffice: number;
     averageVote: string;
 }
 
-const MediaDetails: React.FunctionComponent<MediaDetailsProps> = props => {
+const MediaDetails: React.FunctionComponent<MediaDetailsProps> = ({
+    title,
+    tagLine,
+    overview,
+    genres = [],
+    productionCompanies = [],
+    release,
+    runTime,
+    boxOffice,
+    averageVote,
+}) => {
     return (
         <Component>
-            <Title>{props.title}</Title>
-            <TagLine>{props.tagLine}</TagLine>
-            <Overview>{props.overview}</Overview>
+            <Title>{title}</Title>
+            <TagLine>{tagLine}</TagLine>
+            <Overview>{overview}</Overview>
             <TextWithLabel
-                label={props.genres.reduce<string>((acc, item) => {
+                label={genres?.reduce<string>((acc, item) => {
                     if (acc === '') {
                         return item.name;
                     }
                     return `${acc}, ${item.name}`;
                 }, '')}
-                content={props.productionCompanies.reduce<string>((acc, item) => {
+                content={productionCompanies.reduce<string>((acc, item) => {
                     if (acc === '') {
                         return item.name;
                     }
@@ -69,15 +79,10 @@ const MediaDetails: React.FunctionComponent<MediaDetailsProps> = props => {
                 }, '')}
             />
             <Stats>
-                <StyledTextWithLabel
-                    label="Orignal Release:"
-                    content={props.release}
-                    labelSize="small"
-                    contentSize="large"
-                />
+                <StyledTextWithLabel label="Orignal Release:" content={release} labelSize="small" contentSize="large" />
                 <StyledTextWithLabel
                     label="Running Time:"
-                    content={`${props.runTime} mins`}
+                    content={`${runTime} mins`}
                     labelSize="small"
                     contentSize="large"
                 />
@@ -85,13 +90,13 @@ const MediaDetails: React.FunctionComponent<MediaDetailsProps> = props => {
             <Stats>
                 <StyledTextWithLabel
                     label="Box Office:"
-                    content={`$${formatNumberAsThousands(props.boxOffice)}`}
+                    content={`$${formatNumberAsThousands(boxOffice)}`}
                     labelSize="small"
                     contentSize="large"
                 />
                 <StyledTextWithLabel
                     label="Vote Average:"
-                    content={`${props.averageVote} / 10`}
+                    content={`${averageVote} / 10`}
                     labelSize="small"
                     contentSize="large"
                 />

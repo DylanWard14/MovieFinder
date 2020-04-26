@@ -1,5 +1,6 @@
 import { MovieStoreState } from './Types';
 import { Actions } from './Types';
+import { transformAPIResponse } from './Helpers';
 
 const initialState: MovieStoreState = {
     loading: false,
@@ -20,7 +21,7 @@ export default (state: MovieStoreState = initialState, action: any) => {
             return {
                 ...state,
                 loading: false,
-                data: action.payload.response.data,
+                data: transformAPIResponse(action.payload.response.data),
                 error: undefined,
             };
         }
