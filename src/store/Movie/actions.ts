@@ -1,12 +1,10 @@
 import axios, { AxiosResponse } from 'axios';
-import { AnyAction } from 'redux';
-import { ThunkDispatch } from 'redux-thunk';
 
+import { AppThunk } from '../types';
 import { Actions, MovieResponse } from './types';
 
-export const setMovie = (movieId: number) => {
-    // TODO investigate better ThunkDispatch typing
-    return (dispatch: ThunkDispatch<{}, {}, AnyAction>) => {
+export const setMovie = (movieId: number): AppThunk => {
+    return dispatch => {
         dispatch(setMovieRequest());
         axios
             .get(

@@ -1,10 +1,10 @@
 import axios from 'axios';
-import { Actions } from './types';
-import { AnyAction } from 'redux';
-import { ThunkDispatch } from 'redux-thunk';
 
-export const searchRequest = (searchTerm: string) => {
-    return (dispatch: ThunkDispatch<{}, {}, AnyAction>) => {
+import { AppThunk } from '../types';
+import { Actions } from './types';
+
+export const searchRequest = (searchTerm: string): AppThunk => {
+    return dispatch => {
         dispatch(searchLoading(searchTerm));
         axios
             .get(
