@@ -1,11 +1,18 @@
 import React from 'react';
 import { withKnobs, text, select } from '@storybook/addon-knobs';
+import styled from 'styled-components/macro';
 
 import TextWithLabel from './TextWithLabel';
 
+const Wrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    background: black;
+`;
+
 export default {
     title: 'Components/TextWithLabel',
-    decorators: [withKnobs],
+    decorators: [(storyFn: any) => <Wrapper>{storyFn()}</Wrapper>, withKnobs],
 };
 
 export const DefaultExample = () => <TextWithLabel label="Label" content="This is some content" />;

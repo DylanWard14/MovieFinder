@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders default correctly 1`] = `
+<a
+  class="Link__Component-di1hpm-0 kKrYvE"
+  href="www.google.com"
+  target="__blank"
+>
+  <span
+    class="Link__IconWrapper-di1hpm-1 ereHNh"
+  />
+</a>
+`;
+
+exports[`Link renders with icon correctly 1`] = `
+<a
+  class="Link__Component-di1hpm-0 kKrYvE"
+  href="www.google.com"
+  target="__blank"
+>
+  <span
+    class="Link__IconWrapper-di1hpm-1 ereHNh"
+  >
+    <svg>
+      github-mark.svg
+    </svg>
+  </span>
+</a>
+`;

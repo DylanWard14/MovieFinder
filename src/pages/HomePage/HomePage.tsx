@@ -8,7 +8,9 @@ import TwoColumnLayout from '../../layouts/TwoColumnLayout/TwoColumnLayout';
 import MoviePoster from '../../components/MoviePoster/MoviePoster';
 import MediaDetails from '../../components/MediaDetails/MediaDetails';
 import SearchBar from '../../components/SearchBar/SearchBar';
+import Link from '../../components/Link/Link';
 import { ReactComponent as PoweredByMovieDB } from '../../svgs/PoweredByMovieDB.svg';
+import { ReactComponent as GithubMark } from '../../svgs/github-mark.svg';
 import { RootState } from '../../store/store';
 import { searchRequest } from '../../store/Search/actions';
 import { setMovie } from '../../store/Movie/actions';
@@ -24,6 +26,13 @@ const StyledSearchbar = styled(SearchBar)`
     @media (max-width: 750px) {
         position: static;
     }
+`;
+
+const Footer = styled.div`
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
 const HomePage: React.FunctionComponent = props => {
@@ -69,6 +78,12 @@ const HomePage: React.FunctionComponent = props => {
                         averageVote={movie?.voteAverage}
                     />
                 </TwoColumnLayout>
+                <Footer>
+                    <Link href="https://skempin.github.io/reactjs-tmdb-app/">Based on designs by Stephen Kempin</Link>
+                    <Link href="https://github.com/DylanWard14/MovieFinder" icon={<GithubMark />}>
+                        Developed by Dylan Ward
+                    </Link>
+                </Footer>
             </BackgroundImage>
         );
     }

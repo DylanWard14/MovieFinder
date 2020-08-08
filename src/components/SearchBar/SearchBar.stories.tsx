@@ -1,13 +1,18 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import styled from 'styled-components/macro';
 
 import { SearchStoreState } from '../../store/Search/types';
-import myTheme from '../../theme';
-
 import SearchBar from './SearchBar';
+
+const Wrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    background: black;
+`;
 
 export default {
     title: 'Components/SearchBar',
+    decorators: [(storyFn: any) => <Wrapper>{storyFn()}</Wrapper>],
 };
 
 const searchStore: SearchStoreState = {
@@ -21,20 +26,16 @@ const onSubmit = (searchTerm: string) => console.log(`searching for ${searchTerm
 export const DefaultExample = () => <SearchBar searchStore={searchStore} handleSearchSubmit={onSubmit} />;
 
 export const WithResultsExample = () => (
-    <ThemeProvider theme={myTheme}>
-        <SearchBar
-            searchStore={{
-                ...searchStore,
-                searchTerm: 'result',
-                data: [{ title: 'result1' }, { title: 'result2' }, { title: 'result3' }],
-            }}
-            handleSearchSubmit={onSubmit}
-        />
-    </ThemeProvider>
+    <SearchBar
+        searchStore={{
+            ...searchStore,
+            searchTerm: 'result',
+            data: [{ title: 'result1' }, { title: 'result2' }, { title: 'result3' }],
+        }}
+        handleSearchSubmit={onSubmit}
+    />
 );
 
 export const WithNoDataExample = () => (
-    <ThemeProvider theme={myTheme}>
-        <SearchBar searchStore={{ ...searchStore, searchTerm: 'result', data: [] }} handleSearchSubmit={onSubmit} />
-    </ThemeProvider>
+    <SearchBar searchStore={{ ...searchStore, searchTerm: 'result', data: [] }} handleSearchSubmit={onSubmit} />
 );
