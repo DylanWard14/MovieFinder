@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import { SearchStoreState } from '../../store/Search/Types';
+import { SearchStoreState } from '../../store/Search/types';
 import myTheme from '../../theme';
 
 import SearchBar from './SearchBar';

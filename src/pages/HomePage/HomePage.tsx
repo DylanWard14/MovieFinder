@@ -10,8 +10,8 @@ import MediaDetails from '../../components/MediaDetails/MediaDetails';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import { ReactComponent as PoweredByMovieDB } from '../../svgs/PoweredByMovieDB.svg';
 import { RootState } from '../../store/store';
-import { searchRequest } from '../../store/Search/Actions';
-import { setMovie } from '../../store/Movie/Actions';
+import { searchRequest } from '../../store/Search/actions';
+import { setMovie } from '../../store/Movie/actions';
 
 const StyledDiv = styled.div`
     margin-bottom: 1rem;

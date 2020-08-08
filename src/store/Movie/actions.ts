@@ -2,7 +2,7 @@ import axios, { AxiosResponse } from 'axios';
 import { AnyAction } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
 
-import { Actions, MovieResponse } from './Types';
+import { Actions, MovieResponse } from './types';
 
 export const setMovie = (movieId: number) => {
     // TODO investigate better ThunkDispatch typing

@@ -4,7 +4,7 @@ import {
     ProductionCompany,
     ProductionCountry,
     ProductionCountryResponse,
-} from '../Types';
+} from '../types';
 
 export const Actions = {
     SET_MOVIE_REQUEST: 'SET_MOVIE_REQUEST',

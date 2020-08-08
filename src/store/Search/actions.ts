@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { Actions } from './Types';
+import { Actions } from './types';
 import { AnyAction } from 'redux';
 import { ThunkDispatch } from 'redux-thunk';
 

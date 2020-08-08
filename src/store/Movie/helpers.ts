@@ -1,6 +1,6 @@
-import { Movie, MovieResponse } from './Types';
+import { Movie, MovieResponse } from './types';
 
-import { ProductionCompanyResponse, ProductionCompany, ProductionCountry, ProductionCountryResponse } from '../Types';
+import { ProductionCompanyResponse, ProductionCompany, ProductionCountry, ProductionCountryResponse } from '../types';
 
 export const transformAPIResponse = (data?: MovieResponse): Movie | undefined => {
     if (data) {

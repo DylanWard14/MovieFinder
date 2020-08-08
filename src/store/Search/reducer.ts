@@ -1,5 +1,5 @@
-import { SearchStoreState } from './Types';
-import { Actions } from './Types';
+import { SearchStoreState } from './types';
+import { Actions } from './types';
 
 const initialState: SearchStoreState = {
     searchTerm: '',

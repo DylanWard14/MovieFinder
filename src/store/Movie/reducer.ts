@@ -1,6 +1,6 @@
-import { MovieStoreState } from './Types';
-import { Actions } from './Types';
-import { transformAPIResponse } from './Helpers';
+import { MovieStoreState } from './types';
+import { Actions } from './types';
+import { transformAPIResponse } from './helpers';
 
 const initialState: MovieStoreState = {
     loading: false,

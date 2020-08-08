@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 import { Manager, Reference, Popper } from 'react-popper';
 import { Link } from 'react-router-dom';
 
-import { SearchStoreState } from '../../store/Search/Types';
+import { SearchStoreState } from '../../store/Search/types';
 import useModalToggle from '../../hooks/useModalToggle';
 
 const StyledForm = styled.form`
