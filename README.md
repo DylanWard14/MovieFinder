@@ -19,5 +19,3 @@ A live demo of the application is available at [MovieFinder](http://dylan-ward.c
 ## Author
 
 [Dylan Ward](http://dylan-ward.com)
-
-test
