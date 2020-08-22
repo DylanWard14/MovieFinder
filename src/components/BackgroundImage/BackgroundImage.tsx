@@ -3,11 +3,13 @@ import styled from 'styled-components/macro';
 
 interface BackgroundImageProps {
     imageURLExtension: string;
-    children?: React.ReactNode | React.ReactNode[];
 }
 
 const Image = styled.div<{ url: string }>`
     height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
     background-image: linear-gradient(
             to bottom,
             rgba(0, 0, 0, 1),
@@ -20,15 +22,12 @@ const Image = styled.div<{ url: string }>`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    box-sizing: border-box;
-
-    padding: 1rem;
 `;
 
-const BackgroundImage: React.FunctionComponent<BackgroundImageProps> = ({ imageURLExtension, children }) => {
+const BackgroundImage: React.FunctionComponent<BackgroundImageProps> = ({ imageURLExtension }) => {
     const FullImageUrl = `https://image.tmdb.org/t/p/original${imageURLExtension}`;
 
-    return <Image url={FullImageUrl}>{children}</Image>;
+    return <Image url={FullImageUrl} />;
 };
 
 export default BackgroundImage;
