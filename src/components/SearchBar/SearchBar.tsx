@@ -77,7 +77,7 @@ const SearchBar: React.FunctionComponent<SearchBarProps> = ({ searchStore, handl
     const { ref: ModalRef, visible, setVisible } = useModalToggle(true);
 
     return (
-        <StyledForm onSubmit={handleSubmit} ref={ModalRef} className={className}>
+        <StyledForm onSubmit={handleSubmit} ref={ModalRef} className={className} id="search_form">
             <Manager>
                 <Reference>
                     {({ ref }) => (
@@ -99,7 +99,7 @@ const SearchBar: React.FunctionComponent<SearchBarProps> = ({ searchStore, handl
                     <Popper placement="bottom">
                         {({ ref, style, placement, arrowProps }) => (
                             <StyledPopper ref={ref} style={style} data-placement={placement} tabIndex={1}>
-                                <Results>
+                                <Results id="search_results">
                                     {searchStore?.data?.length
                                         ? searchStore.data.map((item: any) => {
                                               return (
