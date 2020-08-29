@@ -12,9 +12,15 @@ A live demo of the application is available at [MovieFinder](http://dylan-ward.c
 
 1. Clone the repo: `git@github.com:DylanWard14/MovieFinder.git`
 2. `cd MovieFinder`
-3. Install all the packages: `npm install`
-4. Run the application: `npm start`
-5. Open your browser: `http://localhost:3000`
+3. Create `.env.local` file
+4. Add your own The Movie Database API key to the file `REACT_APP_API_KEY=YOU_KEY_HERE`
+5. Install all the packages: `npm install`
+6. Run the application: `npm start`
+7. Open your browser: `http://localhost:3000`
+
+## Cypress Tests
+
+1. Run `npm run cypress:open` to open the Cypress test runner
 
 ## Author
 
