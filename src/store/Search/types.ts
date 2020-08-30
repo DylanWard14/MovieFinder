@@ -7,5 +7,6 @@ export const Actions = {
 export type SearchStoreState = {
     searchTerm: string;
     loading: boolean;
+    // TODO Type this more strictly
     data?: any;
 };
