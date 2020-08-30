@@ -71,7 +71,10 @@ const SearchBar: React.FunctionComponent<SearchBarProps> = ({ searchStore, handl
     const [searchTerm, setSearchTerm] = useState('');
     const handleSubmit = (event: React.FormEvent<EventTarget>) => {
         event.preventDefault();
-        handleSearchSubmit(searchTerm);
+
+        if (searchTerm) {
+            handleSearchSubmit(searchTerm);
+        }
     };
 
     const { ref: ModalRef, visible, setVisible } = useModalToggle(true);
@@ -101,9 +104,9 @@ const SearchBar: React.FunctionComponent<SearchBarProps> = ({ searchStore, handl
                             <StyledPopper ref={ref} style={style} data-placement={placement} tabIndex={1}>
                                 <Results id="search_results">
                                     {searchStore?.data?.length
-                                        ? searchStore.data.map((item: any) => {
+                                        ? searchStore.data.map((item: any, index: number) => {
                                               return (
-                                                  <li tabIndex={0} key={`${item.title}_Search_Result`}>
+                                                  <li tabIndex={0} key={`${item.title}_search_result_${index}`}>
                                                       <Result to={`/${item.id}`} onClick={() => setVisible(false)}>
                                                           {item.title}
                                                       </Result>
