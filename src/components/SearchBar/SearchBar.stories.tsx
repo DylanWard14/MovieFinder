@@ -30,7 +30,11 @@ export const WithResultsExample = () => (
         searchStore={{
             ...searchStore,
             searchTerm: 'result',
-            data: [{ title: 'result1' }, { title: 'result2' }, { title: 'result3' }],
+            data: [
+                { title: 'result1', id: 1 },
+                { title: 'result2', id: 2 },
+                { title: 'result3', id: 3 },
+            ],
         }}
         handleSearchSubmit={onSubmit}
     />
