@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchResults renders loading correctly 1`] = `
+<div
+  class="LoadingSpinner__Component-nzk750-0 fgpHyL"
+>
+  <div
+    class="LoadingSpinner__Ring-nzk750-1 iEWFiw"
+  >
+    <div />
+    <div />
+    <div />
+    <div />
+  </div>
+</div>
+`;
+
+exports[`SearchResults renders with data correctly 1`] = `
+<ul
+  class="SearchResults__Results-miypjy-0 iVYBlS"
+  id="search_results"
+>
+  <li
+    tabindex="0"
+  >
+    <a
+      class="SearchResults__Result-miypjy-1 cvwnSc"
+      href="/1"
+    >
+      test1
+    </a>
+  </li>
+  <li
+    tabindex="0"
+  >
+    <a
+      class="SearchResults__Result-miypjy-1 cvwnSc"
+      href="/2"
+    >
+      test2
+    </a>
+  </li>
+  <li
+    tabindex="0"
+  >
+    <a
+      class="SearchResults__Result-miypjy-1 cvwnSc"
+      href="/3"
+    >
+      test3
+    </a>
+  </li>
+  <li
+    tabindex="0"
+  >
+    <a
+      class="SearchResults__Result-miypjy-1 cvwnSc"
+      href="/4"
+    >
+      test4
+    </a>
+  </li>
+  <li
+    tabindex="0"
+  >
+    <a
+      class="SearchResults__Result-miypjy-1 cvwnSc"
+      href="/5"
+    >
+      test5
+    </a>
+  </li>
+</ul>
+`;
+
+exports[`SearchResults renders with error correctly 1`] = `
+<p
+  class="SearchResults__SearchError-miypjy-3 jNVPKf"
+>
+  An error occurred, please try again later.
+</p>
+`;

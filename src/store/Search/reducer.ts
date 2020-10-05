@@ -16,6 +16,7 @@ export default (state: SearchStoreState = initialState, action: any) => {
                 ...state,
                 searchTerm: action.payload.searchTerm,
                 loading: true,
+                error: undefined,
             };
         }
         case Actions.SEARCH_SUCCESS: {
@@ -23,6 +24,7 @@ export default (state: SearchStoreState = initialState, action: any) => {
                 ...state,
                 data: transformAPIResponse(action.payload.response.data.results),
                 loading: false,
+                error: undefined,
             };
         }
         case Actions.SEARCH_ERROR: {
