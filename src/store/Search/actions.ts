@@ -37,7 +37,7 @@ export const setSearchSuccess = (response: AxiosResponse<SearchResponse>) => {
     };
 };
 
-export const setSearchError = (error: string) => {
+export const setSearchError = (error: Error) => {
     return {
         type: Actions.SEARCH_ERROR,
         payload: { error },

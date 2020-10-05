@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import myTheme from '../../theme';
 import MediaDetails from './MediaDetails';
 
-describe('TextWithLabel', () => {
+describe('MediaDetails', () => {
     it('renders with a label and content correctly', () => {
         const wrapper = render(
             <ThemeProvider theme={myTheme}>

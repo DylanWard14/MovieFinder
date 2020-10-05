@@ -9,7 +9,7 @@ export type SearchStoreState = {
     searchTerm: string;
     loading: boolean;
     data?: SearchResult[];
-    error?: string;
+    error?: Error;
 };
 
 export type SearchResult = {

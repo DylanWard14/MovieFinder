@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ReactComponent as PoweredByMovieDB } from '../svgs/PoweredByMovieDB.svg';
 import { ReactComponent as GithubMark } from '../svgs/github-mark.svg';
 import TwoColumnLayout from '../layouts/TwoColumnLayout/TwoColumnLayout';
-import SearchBar from '../components/SearchBar/SearchBar';
+import SearchBar from '../components/Search/SearchBar';
 import Link from '../components/Link/Link';
 import { RootState } from '../store/store';
 import { searchRequest } from '../store/Search/actions';
