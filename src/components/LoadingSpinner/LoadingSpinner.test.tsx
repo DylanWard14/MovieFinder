@@ -1,17 +1,11 @@
 import React from 'react';
-import { render } from 'enzyme';
-import { ThemeProvider } from 'styled-components';
 
-import myTheme from '../../theme';
+import { renderWrapper } from '../../utils/enzyme/themeWrapper';
 import LoadingSpiner from './LoadingSpinner';
 
 describe('LoadingSpinner', () => {
     it('renders correctly', () => {
-        const wrapper = render(
-            <ThemeProvider theme={myTheme}>
-                <LoadingSpiner />
-            </ThemeProvider>,
-        );
+        const wrapper = renderWrapper(<LoadingSpiner />);
         expect(wrapper).toMatchSnapshot();
     });
 });
