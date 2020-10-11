@@ -10,6 +10,8 @@ const StyledForm = styled.form`
     width: 100%;
 `;
 
+StyledForm.displayName = 'search-form';
+
 const StyledInput = styled.input`
     width: 100%;
     background: none;
@@ -43,7 +45,7 @@ interface SearchBarProps {
 }
 
 const SearchBar: React.FunctionComponent<SearchBarProps> = ({ searchStore, handleSearchSubmit, className }) => {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState(searchStore.searchTerm);
     const handleSubmit = (event: React.FormEvent<EventTarget>) => {
         event.preventDefault();
 

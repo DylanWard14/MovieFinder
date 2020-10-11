@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar renders correctly 1`] = `
+<form
+  class="SearchBar__StyledForm-sc-196gn3w-0 iBTxGs"
+  id="search_form"
+>
+  <input
+    autocomplete="off"
+    class="SearchBar__StyledInput-sc-196gn3w-1 kLlndz"
+    id="search"
+    name="search"
+    placeholder="Search For Movie Here..."
+    type="text"
+    value=""
+  />
+  <div
+    class="SearchBar__StyledPopper-sc-196gn3w-2 hJvTep"
+    style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
+    tabindex="1"
+  >
+    <ul
+      class="SearchResults__Results-miypjy-0 iVYBlS"
+      id="search_results"
+    />
+    <div />
+  </div>
+</form>
+`;
