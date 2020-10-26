@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import { AppThunk } from '../types';
+import { getUserDetails } from '../User-details/actions';
 import { Actions, UserAuthResponse } from './types';
 
 export const getRequestToken = (): AppThunk => {
@@ -22,7 +23,9 @@ export const login = (requestToken?: string): AppThunk => {
     return dispatch => {
         // TODO Should we check that the session ID is still valid?
         if (localStorage.getItem('sessionID')) {
-            return dispatch(getLoginSuccess({ success: true, session_id: String(localStorage.getItem('sessionID')) }));
+            dispatch(getLoginSuccess({ success: true, session_id: String(localStorage.getItem('sessionID')) }));
+            dispatch(getUserDetails());
+            return;
         }
 
         if (requestToken) {
@@ -39,6 +42,7 @@ export const login = (requestToken?: string): AppThunk => {
 
                     // Store sessionID in local storage so user does not have to logon every time
                     localStorage.setItem('sessionID', response.data['session_id']);
+                    dispatch(getUserDetails());
                 })
                 .catch(error => {
                     dispatch(getLoginError(error));

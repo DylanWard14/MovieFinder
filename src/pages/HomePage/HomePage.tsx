@@ -31,6 +31,7 @@ const HomePage: React.FunctionComponent = props => {
     }, [params.movieId, dispatch, params]);
 
     const movie = useSelector((state: RootState) => state.movie.data);
+    const user = useSelector((state: RootState) => state.user);
 
     if (!params?.movieId) {
         return <Redirect to="/11" />;
@@ -39,7 +40,13 @@ const HomePage: React.FunctionComponent = props => {
     if (movie) {
         return (
             <Fragment>
-                <button onClick={() => dispatch(getRequestToken())}>Login</button>
+                {/* TODO add a loading state while these are loading */}
+                {!user.auth.data?.authorized || !user.details.data ? (
+                    <button onClick={() => dispatch(getRequestToken())}>Login</button>
+                ) : (
+                    <p style={{ color: 'white' }}>{user.details.data.username}</p>
+                )}
+
                 <BackgroundImage imageURLExtension={movie?.backdropPath} />
                 <Page>
                     <TwoColumnLayout backgroundColor={'rgba(0, 0, 0, 0.85)'}>

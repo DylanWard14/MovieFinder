@@ -3,8 +3,9 @@ import thunk from 'redux-thunk';
 import SearchReducer from './Search/reducer';
 import MovieReducer from './Movie/reducer';
 import UserAuthReducer from './User-auth/reducer';
+import UserDetailsReducer from './User-details/reducer';
 
-const userReducer = combineReducers({ auth: UserAuthReducer });
+const userReducer = combineReducers({ auth: UserAuthReducer, details: UserDetailsReducer });
 
 const rootReducer = combineReducers({ user: userReducer, search: SearchReducer, movie: MovieReducer });
 export type RootState = ReturnType<typeof rootReducer>;
