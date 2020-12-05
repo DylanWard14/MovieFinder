@@ -1,11 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoadingSpinner renders correctly 1`] = `
-<div
-  class="LoadingSpinner__Component-nzk750-0 fgpHyL"
->
+<div>
   <div
-    class="LoadingSpinner__Ring-nzk750-1 iEWFiw"
+    class="LoadingSpinner__Ring-nzk750-0 jkoKXZ"
   >
     <div />
     <div />
