@@ -10,6 +10,7 @@ import history from './history';
 
 function App() {
     return (
+        // TODO remove this div
         <div className="App">
             <Provider store={store}>
                 <ThemeProvider theme={myTheme}>

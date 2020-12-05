@@ -5,6 +5,7 @@ const myTheme: DefaultTheme = {
         main: '#00FC87',
         secondary: 'white',
         error: '#ff3838',
+        blue: '#01b3e4',
     },
     typography: {
         heading: {

@@ -1,12 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components/macro';
 
-const Component = styled.div`
-    width: 100%;
-    height: 100%;
-    margin: auto;
-`;
-
 const rotate = keyframes`
 0% {
     transform: rotate(0deg);
@@ -45,14 +39,14 @@ const Ring = styled.div`
 // TODO improve loading spinner
 const LoadingSpinner: React.FunctionComponent = () => {
     return (
-        <Component>
+        <div>
             <Ring>
                 <div></div>
                 <div></div>
                 <div></div>
                 <div></div>
             </Ring>
-        </Component>
+        </div>
     );
 };
 

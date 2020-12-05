@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User snapshot renders correctly 1`] = `
+Array [
+  <p
+    class="User__Username-sc-1j5wnkp-1 ipKolV"
+  >
+    Dward
+  </p>,
+  <img
+    class="User__Avatar-sc-1j5wnkp-0 bGnazR"
+    src="https://www.gravatar.com/avatar/abc123"
+  />,
+]
+`;

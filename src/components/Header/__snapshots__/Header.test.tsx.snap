@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header snapshot renders correctly 1`] = `
+<header
+  class="Header__Component-sc-3q01gu-0 hoCHew"
+>
+  <div>
+    <h1
+      class="Header__Heading-sc-3q01gu-1 jPDuAc"
+    >
+      Movie Finder
+    </h1>
+  </div>
+  <div>
+    <button
+      class="Button__StyledButton-tmhdcf-0 kGMZFd"
+    >
+      Login
+    </button>
+  </div>
+</header>
+`;

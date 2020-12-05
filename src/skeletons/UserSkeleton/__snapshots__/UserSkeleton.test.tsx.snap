@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserSkeleton snapshot renders correctly 1`] = `
+<div
+  class="UserSkeleton__Component-sc-173otu3-0 hbEMBZ"
+>
+  <div
+    class="UserSkeleton__Name-sc-173otu3-2 dfxFNH"
+  />
+  <div
+    class="UserSkeleton__Avatar-sc-173otu3-1 bRuhBC"
+  />
+</div>
+`;
