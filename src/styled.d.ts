@@ -14,6 +14,7 @@ declare module 'styled-components' {
             main: string;
             secondary: string;
             error: string;
+            blue: string;
         };
         typography: {
             heading: Typography;
