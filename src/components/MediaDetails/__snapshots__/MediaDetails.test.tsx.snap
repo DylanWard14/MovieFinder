@@ -6,6 +6,7 @@ exports[`MediaDetails renders with a label and content correctly 1`] = `
 >
   <h1
     class="MediaDetails__Title-h4ei75-1 ksMIXu"
+    id="movie-title"
   >
     Star Wars
   </h1>
