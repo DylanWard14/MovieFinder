@@ -3,7 +3,7 @@
 exports[`SearchResults renders loading correctly 1`] = `
 <div>
   <div
-    class="LoadingSpinner__Ring-nzk750-0 jkoKXZ"
+    class="LoadingSpinner__Ring-nzk750-0 behNsB"
   >
     <div />
     <div />
@@ -15,14 +15,14 @@ exports[`SearchResults renders loading correctly 1`] = `
 
 exports[`SearchResults renders with data correctly 1`] = `
 <ul
-  class="SearchResults__Results-miypjy-0 iVYBlS"
+  class="SearchResults__Results-miypjy-0 seyyS"
   id="search_results"
 >
   <li
     tabindex="0"
   >
     <a
-      class="SearchResults__Result-miypjy-1 cvwnSc"
+      class="SearchResults__Result-miypjy-1 IggoE"
       href="/1"
     >
       test1
@@ -32,7 +32,7 @@ exports[`SearchResults renders with data correctly 1`] = `
     tabindex="0"
   >
     <a
-      class="SearchResults__Result-miypjy-1 cvwnSc"
+      class="SearchResults__Result-miypjy-1 IggoE"
       href="/2"
     >
       test2
@@ -42,7 +42,7 @@ exports[`SearchResults renders with data correctly 1`] = `
     tabindex="0"
   >
     <a
-      class="SearchResults__Result-miypjy-1 cvwnSc"
+      class="SearchResults__Result-miypjy-1 IggoE"
       href="/3"
     >
       test3
@@ -52,7 +52,7 @@ exports[`SearchResults renders with data correctly 1`] = `
     tabindex="0"
   >
     <a
-      class="SearchResults__Result-miypjy-1 cvwnSc"
+      class="SearchResults__Result-miypjy-1 IggoE"
       href="/4"
     >
       test4
@@ -62,7 +62,7 @@ exports[`SearchResults renders with data correctly 1`] = `
     tabindex="0"
   >
     <a
-      class="SearchResults__Result-miypjy-1 cvwnSc"
+      class="SearchResults__Result-miypjy-1 IggoE"
       href="/5"
     >
       test5
@@ -73,7 +73,7 @@ exports[`SearchResults renders with data correctly 1`] = `
 
 exports[`SearchResults renders with error correctly 1`] = `
 <p
-  class="SearchResults__SearchError-miypjy-3 jNVPKf"
+  class="SearchResults__SearchError-miypjy-3 bkzDEj"
 >
   An error occurred, please try again later.
 </p>

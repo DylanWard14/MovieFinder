@@ -11,9 +11,11 @@ describe('Search', () => {
         // # Intercept the inital movie request and fake the response
         cy.interceptDefaultMovie();
 
+        console.log('API KEY', getApiKey());
+
         // # Intercept the search request and fake the response
         cy.intercept(
-            `https://api.themoviedb.org/3/search/movie?api_key=${getApiKey()}&language=en-US&query=Harry Potter and the&page=1&include_adult=false`,
+            `https://api.themoviedb.org/3/search/movie?api_key=${getApiKey()}&language=en-US&query=Harry%20Potter%20and%20the&page=1&include_adult=false`,
             {
                 fixture: 'search',
             },

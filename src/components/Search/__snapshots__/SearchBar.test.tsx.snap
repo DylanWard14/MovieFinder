@@ -2,12 +2,12 @@
 
 exports[`SearchBar renders correctly 1`] = `
 <form
-  class="SearchBar__StyledForm-sc-196gn3w-0 iBTxGs"
+  class="SearchBar__StyledForm-sc-196gn3w-0 frqCfs"
   id="search_form"
 >
   <input
     autocomplete="off"
-    class="SearchBar__StyledInput-sc-196gn3w-1 kLlndz"
+    class="SearchBar__StyledInput-sc-196gn3w-1 ktJkNf"
     id="search"
     name="search"
     placeholder="Search For Movie Here..."
@@ -15,12 +15,12 @@ exports[`SearchBar renders correctly 1`] = `
     value=""
   />
   <div
-    class="SearchBar__StyledPopper-sc-196gn3w-2 hJvTep"
+    class="SearchBar__StyledPopper-sc-196gn3w-2 ftxKXh"
     style="position:absolute;top:0;left:0;opacity:0;pointer-events:none"
     tabindex="1"
   >
     <ul
-      class="SearchResults__Results-miypjy-0 iVYBlS"
+      class="SearchResults__Results-miypjy-0 seyyS"
       id="search_results"
     />
     <div />

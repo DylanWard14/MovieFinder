@@ -2,24 +2,24 @@
 
 exports[`Link renders default correctly 1`] = `
 <a
-  class="Link__Component-di1hpm-0 kKrYvE"
+  class="Link__Component-di1hpm-0 buMmBA"
   href="www.google.com"
   target="__blank"
 >
   <span
-    class="Link__IconWrapper-di1hpm-1 ereHNh"
+    class="Link__IconWrapper-di1hpm-1 zPDDJ"
   />
 </a>
 `;
 
 exports[`Link renders with icon correctly 1`] = `
 <a
-  class="Link__Component-di1hpm-0 kKrYvE"
+  class="Link__Component-di1hpm-0 buMmBA"
   href="www.google.com"
   target="__blank"
 >
   <span
-    class="Link__IconWrapper-di1hpm-1 ereHNh"
+    class="Link__IconWrapper-di1hpm-1 zPDDJ"
   >
     <svg>
       github-mark.svg

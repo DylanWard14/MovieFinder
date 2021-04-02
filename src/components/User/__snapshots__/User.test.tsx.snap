@@ -3,12 +3,12 @@
 exports[`User snapshot renders correctly 1`] = `
 Array [
   <p
-    class="User__Username-sc-1j5wnkp-1 ipKolV"
+    class="User__Username-sc-1j5wnkp-1 kSkEXl"
   >
     Dward
   </p>,
   <img
-    class="User__Avatar-sc-1j5wnkp-0 bGnazR"
+    class="User__Avatar-sc-1j5wnkp-0 ipnUnN"
     src="https://www.gravatar.com/avatar/abc123"
   />,
 ]
