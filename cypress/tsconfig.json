@@ -1,8 +1,9 @@
 {
     "compilerOptions": {
-        "allowJs": true,
-        "baseUrl": "../node_modules",
-        "types": ["cypress"]
+        "target": "es5",
+        "lib": ["es5", "dom"],
+        "types": ["cypress"],
+        "baseUrl": "../node_modules"
     },
-    "include": ["**/*.*"]
+    "include": ["**/*.ts"]
 }
