@@ -44,7 +44,7 @@
         "build-storybook": "build-storybook -s public",
         "lint": "eslint */**/*.{js,ts,tsx}",
         "lint:fix": "eslint */**/*.{js,ts,tsx} --fix",
-        "cypress:open": "cypress open"
+        "test:cypress": "cypress open"
     },
     "jest": {
         "snapshotSerializers": [
@@ -81,7 +81,7 @@
         "@typescript-eslint/eslint-plugin": "^2.19.0",
         "@typescript-eslint/parser": "^2.19.0",
         "babel-plugin-styled-components": "^1.10.7",
-        "cypress": "^5.0.0",
+        "cypress": "^6.8.0",
         "enzyme-to-json": "^3.4.4",
         "eslint": "^6.8.0",
         "eslint-config-prettier": "^6.10.0",
