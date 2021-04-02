@@ -23,3 +23,11 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+import { getApiKey } from './helpers';
+
+Cypress.Commands.add('interceptDefaultMovie', () => {
+    cy.intercept(`https://api.themoviedb.org/3/movie/11?api_key=${getApiKey()}&language=en-US`, {
+        fixture: 'movie_star_wars',
+    });
+});

@@ -4,17 +4,25 @@
 // - Use element ID when selecting an element. Create one if none.
 // ***************************************************************
 
+import { getApiKey } from '../../support/helpers';
+
 describe('Search', () => {
     beforeEach(() => {
-        const API_KEY = Cypress.env('REACT_API_KEY');
+        // # Intercept the inital movie request and fake the response
+        cy.interceptDefaultMovie();
 
         // # Intercept the search request and fake the response
         cy.intercept(
-            `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=Harry Potter and the&page=1&include_adult=false`,
+            `https://api.themoviedb.org/3/search/movie?api_key=${getApiKey()}&language=en-US&query=Harry Potter and the&page=1&include_adult=false`,
             {
                 fixture: 'search',
             },
         );
+
+        // # Intercept the harry potter movie request and fake the response
+        cy.intercept(`https://api.themoviedb.org/3/movie/671?api_key=${getApiKey()}&language=en-US`, {
+            fixture: 'movie_harry_potter',
+        });
     });
 
     it('Can search and select movie', () => {
@@ -49,5 +57,8 @@ describe('Search', () => {
 
         // * Check that the url now includes the movies ID
         cy.url().should('include', '671');
+
+        // * Check that the movie title is correct
+        cy.get('#movie-title').should('have.text', "Harry Potter and the Philosopher's Stone");
     });
 });
