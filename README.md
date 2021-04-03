@@ -20,7 +20,9 @@ A live demo of the application is available at [MovieFinder](http://dylan-ward.c
 
 ## Cypress Tests
 
-1. Run `npm run cypress:open` to open the Cypress test runner
+1. Create a `cypress.env.json` file at the root of the project
+2. Add `{ "REACT_API_KEY": "*" }` to the file, replacing `*` with your The Movie Database API Key
+3. Run `npm run cypress:open` to open the Cypress test runner
 
 ## Author
 

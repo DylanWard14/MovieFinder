@@ -2,96 +2,97 @@
 
 exports[`MediaDetails renders with a label and content correctly 1`] = `
 <div
-  class="MediaDetails__Component-h4ei75-0 kCELJj"
+  class="MediaDetails__Component-h4ei75-0 dvepUz"
 >
   <h1
-    class="MediaDetails__Title-h4ei75-1 ksMIXu"
+    class="MediaDetails__Title-h4ei75-1 jeodcK"
+    id="movie-title"
   >
     Star Wars
   </h1>
   <p
-    class="MediaDetails__TagLine-h4ei75-2 dFiTEg"
+    class="MediaDetails__TagLine-h4ei75-2 iCGgXM"
   >
     A long time ago in a galaxy far, far away...
   </p>
   <p
-    class="MediaDetails__Overview-h4ei75-3 gJIbCM"
+    class="MediaDetails__Overview-h4ei75-3 hpRejE"
   >
     Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.
   </p>
   <div
-    class="TextWithLabel__Component-sc-13uehc1-0 juyjpy"
+    class="TextWithLabel__Component-sc-13uehc1-0 hfpARe"
   >
     <p
-      class="TextWithLabel__Heading-sc-13uehc1-1 bTEzLT"
+      class="TextWithLabel__Heading-sc-13uehc1-1 cZTmCL"
     >
       genre1, genre2
     </p>
     <p
-      class="TextWithLabel__Content-sc-13uehc1-2 djIfsi"
+      class="TextWithLabel__Content-sc-13uehc1-2 fgCPNy"
     >
       company1, company2
     </p>
   </div>
   <div
-    class="MediaDetails__Stats-h4ei75-4 isbobJ"
+    class="MediaDetails__Stats-h4ei75-4 vLGEl"
   >
     <div
-      class="TextWithLabel__Component-sc-13uehc1-0 juyjpy MediaDetails__StyledTextWithLabel-h4ei75-5 dsWNqY"
+      class="TextWithLabel__Component-sc-13uehc1-0 hfpARe MediaDetails__StyledTextWithLabel-h4ei75-5 ijNNlk"
     >
       <p
-        class="TextWithLabel__Heading-sc-13uehc1-1 dvvKXU"
+        class="TextWithLabel__Heading-sc-13uehc1-1 jFXYqw"
       >
         Orignal Release:
       </p>
       <p
-        class="TextWithLabel__Content-sc-13uehc1-2 ZPJpN"
+        class="TextWithLabel__Content-sc-13uehc1-2 EMMWx"
       >
         1977-05-25
       </p>
     </div>
     <div
-      class="TextWithLabel__Component-sc-13uehc1-0 juyjpy MediaDetails__StyledTextWithLabel-h4ei75-5 dsWNqY"
+      class="TextWithLabel__Component-sc-13uehc1-0 hfpARe MediaDetails__StyledTextWithLabel-h4ei75-5 ijNNlk"
     >
       <p
-        class="TextWithLabel__Heading-sc-13uehc1-1 dvvKXU"
+        class="TextWithLabel__Heading-sc-13uehc1-1 jFXYqw"
       >
         Running Time:
       </p>
       <p
-        class="TextWithLabel__Content-sc-13uehc1-2 ZPJpN"
+        class="TextWithLabel__Content-sc-13uehc1-2 EMMWx"
       >
         121 mins
       </p>
     </div>
   </div>
   <div
-    class="MediaDetails__Stats-h4ei75-4 isbobJ"
+    class="MediaDetails__Stats-h4ei75-4 vLGEl"
   >
     <div
-      class="TextWithLabel__Component-sc-13uehc1-0 juyjpy MediaDetails__StyledTextWithLabel-h4ei75-5 dsWNqY"
+      class="TextWithLabel__Component-sc-13uehc1-0 hfpARe MediaDetails__StyledTextWithLabel-h4ei75-5 ijNNlk"
     >
       <p
-        class="TextWithLabel__Heading-sc-13uehc1-1 dvvKXU"
+        class="TextWithLabel__Heading-sc-13uehc1-1 jFXYqw"
       >
         Box Office:
       </p>
       <p
-        class="TextWithLabel__Content-sc-13uehc1-2 ZPJpN"
+        class="TextWithLabel__Content-sc-13uehc1-2 EMMWx"
       >
         $775,398,007
       </p>
     </div>
     <div
-      class="TextWithLabel__Component-sc-13uehc1-0 juyjpy MediaDetails__StyledTextWithLabel-h4ei75-5 dsWNqY"
+      class="TextWithLabel__Component-sc-13uehc1-0 hfpARe MediaDetails__StyledTextWithLabel-h4ei75-5 ijNNlk"
     >
       <p
-        class="TextWithLabel__Heading-sc-13uehc1-1 dvvKXU"
+        class="TextWithLabel__Heading-sc-13uehc1-1 jFXYqw"
       >
         Vote Average:
       </p>
       <p
-        class="TextWithLabel__Content-sc-13uehc1-2 ZPJpN"
+        class="TextWithLabel__Content-sc-13uehc1-2 EMMWx"
       >
         8.2 / 10
       </p>

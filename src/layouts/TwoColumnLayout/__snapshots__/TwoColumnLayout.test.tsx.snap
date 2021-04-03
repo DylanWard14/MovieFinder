@@ -2,10 +2,10 @@
 
 exports[`TwoColumnLayout renders with multiple children correctly 1`] = `
 <div
-  class="TwoColumnLayout__Component-cpzjfm-0 lfHNmt"
+  class="TwoColumnLayout__Component-cpzjfm-0 liLJpR"
 >
   <div
-    class="TwoColumnLayout__Column-cpzjfm-1 cZzKOt"
+    class="TwoColumnLayout__Column-cpzjfm-1 ieDOZl"
     width="40"
   >
     <div>
@@ -21,7 +21,7 @@ exports[`TwoColumnLayout renders with multiple children correctly 1`] = `
     </div>
   </div>
   <div
-    class="TwoColumnLayout__Column-cpzjfm-1 hYDRIz"
+    class="TwoColumnLayout__Column-cpzjfm-1 bOmmuv"
     width="60"
   >
     <div>
@@ -41,10 +41,10 @@ exports[`TwoColumnLayout renders with multiple children correctly 1`] = `
 
 exports[`TwoColumnLayout renders with single children correctly 1`] = `
 <div
-  class="TwoColumnLayout__Component-cpzjfm-0 lfHNmt"
+  class="TwoColumnLayout__Component-cpzjfm-0 liLJpR"
 >
   <div
-    class="TwoColumnLayout__Column-cpzjfm-1 cZzKOt"
+    class="TwoColumnLayout__Column-cpzjfm-1 ieDOZl"
     width="40"
   >
     <p>
@@ -52,7 +52,7 @@ exports[`TwoColumnLayout renders with single children correctly 1`] = `
     </p>
   </div>
   <div
-    class="TwoColumnLayout__Column-cpzjfm-1 hYDRIz"
+    class="TwoColumnLayout__Column-cpzjfm-1 bOmmuv"
     width="60"
   >
     <p>

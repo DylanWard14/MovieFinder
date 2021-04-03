@@ -2,15 +2,15 @@
 
 exports[`TextWithLabel renders with a label and content and sizes set correctly 1`] = `
 <div
-  class="TextWithLabel__Component-sc-13uehc1-0 juyjpy"
+  class="TextWithLabel__Component-sc-13uehc1-0 hfpARe"
 >
   <p
-    class="TextWithLabel__Heading-sc-13uehc1-1 dvvKXU"
+    class="TextWithLabel__Heading-sc-13uehc1-1 jFXYqw"
   >
     label
   </p>
   <p
-    class="TextWithLabel__Content-sc-13uehc1-2 ZPJpN"
+    class="TextWithLabel__Content-sc-13uehc1-2 EMMWx"
   >
     content
   </p>
@@ -19,15 +19,15 @@ exports[`TextWithLabel renders with a label and content and sizes set correctly 
 
 exports[`TextWithLabel renders with a label and content correctly 1`] = `
 <div
-  class="TextWithLabel__Component-sc-13uehc1-0 juyjpy"
+  class="TextWithLabel__Component-sc-13uehc1-0 hfpARe"
 >
   <p
-    class="TextWithLabel__Heading-sc-13uehc1-1 bTEzLT"
+    class="TextWithLabel__Heading-sc-13uehc1-1 cZTmCL"
   >
     label
   </p>
   <p
-    class="TextWithLabel__Content-sc-13uehc1-2 djIfsi"
+    class="TextWithLabel__Content-sc-13uehc1-2 fgCPNy"
   >
     content
   </p>

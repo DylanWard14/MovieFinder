@@ -2,13 +2,13 @@
 
 exports[`UserSkeleton snapshot renders correctly 1`] = `
 <div
-  class="UserSkeleton__Component-sc-173otu3-0 hbEMBZ"
+  class="UserSkeleton__Component-sc-173otu3-0 UxUZF"
 >
   <div
-    class="UserSkeleton__Name-sc-173otu3-2 dfxFNH"
+    class="UserSkeleton__Name-sc-173otu3-2 GsVYr"
   />
   <div
-    class="UserSkeleton__Avatar-sc-173otu3-1 bRuhBC"
+    class="UserSkeleton__Avatar-sc-173otu3-1 kSfRim"
   />
 </div>
 `;

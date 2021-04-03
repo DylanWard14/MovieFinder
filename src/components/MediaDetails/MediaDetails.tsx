@@ -61,7 +61,7 @@ const MediaDetails: React.FunctionComponent<MediaDetailsProps> = ({
 }) => {
     return (
         <Component>
-            <Title>{title}</Title>
+            <Title id="movie-title">{title}</Title>
             <TagLine>{tagLine}</TagLine>
             <Overview>{overview}</Overview>
             <TextWithLabel

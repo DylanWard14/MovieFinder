@@ -2,7 +2,7 @@
 
 exports[`Button snapshot renders correctly 1`] = `
 <button
-  class="Button__StyledButton-tmhdcf-0 kGMZFd"
+  class="Button__StyledButton-tmhdcf-0 xaYYJ"
 >
   Test
 </button>
