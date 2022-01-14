@@ -6,7 +6,7 @@ Movie finder is a web application built with React, using [The Movie Database (T
 
 ## Live Demo
 
-A live demo of the application is available at [MovieFinder](http://dylan-ward.com/MovieFinder).
+A live demo of the application is available at [MovieFinder](https://movie-finder-ward.herokuapp.com/).
 
 ## Installation
 
